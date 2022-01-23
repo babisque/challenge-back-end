@@ -19,4 +19,10 @@ $router->group(['prefix' => '/api'], function () use ($router) {
    $router->get('receitas/{id}', 'ReceitaController@show');
    $router->put('receitas/{id}', 'ReceitaController@update');
    $router->delete('receitas/{id}', 'ReceitaController@destroy');
+
+   $router->post('despesas', 'DespesaController@store');
+   $router->get('despesas', 'DespesaController@index');
+   $router->get('despesas/{id}', 'DespesaController@show');
+   $router->put('despesas/{id}', 'DespesaController@update');
+   $router->delete('despesas/{id}', 'DespesaController@destroy');
 });
